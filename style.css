@@ -630,13 +630,27 @@
   clip-path: inset(0 -100vmax);
 }
 
-/* INTERIOR  PACKAGE MOBILE */
-@media screen and(max-width:520px) {
+/* CATALOG INTERIOR MOBILE */
+
+@media screen and (max-width:520px) {
   .package_theme{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-row: 1fr;
+  }
+  .package_theme:nth-child(even){
+    display: grid;
+    grid-row: 1fr;
   }
 }
+
+/* INTERIOR  PACKAGE MOBILE */
+/* @media screen and (max-width:520px) {
+  .package_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+} */
 
 /* INTERIOR PACKAGE 1 */
 /* .catalogx{
@@ -668,12 +682,12 @@
  */
 
 
-@media screen and (max-width: 460px) {
+/* @media screen and (max-width: 460px) {
   .wrapper{
     flex-direction: column-reverse;
     padding: 1rem;
   }
-}
+} */
 
 /* BACKUP */
 /* .package_wrapper{
@@ -739,39 +753,66 @@
 
 /* UPDATES PAGE */
 
-.updatesSection{
+
+
+
+
+.updates{
   padding: 3.5rem 0;
 }
-.updatesSection_wrapper{
+.updates_wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5rem;
 }
-.updatesSection_content{
-  padding: 2.5rem 0;
+.updates_content{
+  padding: 3rem;
   max-width: 80rem;
   width: 100%;
-}
-.updatesSection_content h1{
   text-align: center;
-  font-size: 7rem;
-  font-weight: 700;
-  color: var(--clr-primary);
 }
-.updatesSection_content p{
+.updates_content p{
   text-align: justify;
 }
+.updates_content h1{
+  color: #1b8b83;
+  font-size: 7rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
 
 
-/* .contactsSection_wrapper .conact_form p{
+/* UPDATES MOBILE */
+@media screen and (max-width:520px) {
+  .updates_wrapper{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .designs_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .recentproject_wrapper{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+
+/* .contactsSection_wrapper .contact_form p{
  font-weight: 500; 
 } */
 
 
 /* UPDATES BUILDING DESIGN */
 
-.designSection{
+/* .designSection{
   padding: 3rem 0;
 }
 .designSection h2{
@@ -826,11 +867,159 @@
   font-weight: bold;
   display: flex;
   justify-content: space-between;
+} */ 
+
+/* DESIGNS */
+
+/* BUILDING DESIGN CARD */
+.buildingDesign{
+  padding: 3rem 0;
+ }
+ .buildingDesign__wrapper{
+   display: grid;
+   grid-template-columns: 2.5fr 1fr ;
+   grid-gap: 2.5rem;
+ }
+ .buildingDesign h1{
+ font-size: 5rem;
+ font-weight: 700rem;
+ color: var(--clr-secondary);
+ }
+ .buildingDesign h2{
+   font-size: 2rem;
+   font-weight: 700;
+ }
+ .buildingDesign__right ul li{
+ font-size: 2rem;
+ font-weight: 700;
+ }
+ .catalogDesign__card{
+   padding: 3rem 0;
+   display: grid;
+   grid-template-columns: 1fr 1fr ;
+   grid-gap: 2.5rem;
+ }
+ .catalogDesign__card .card {
+  padding: 2.5rem;
+  background-color: var(--clr-semilight);
+  
+ 
+ }
+ .catalogDesign__card .card h2{
+   text-align: center;
+   margin-bottom: 2rem;
+   font-size: 3rem;
+ 
+ }
+ .buildingDesign__right ul li{
+   margin-bottom: 2rem;
+   font-weight: bold;
+   display: flex;
+   justify-content: space-between;
+ }
+/* .designs{
+  padding: 3rem 0;
 }
+.designs h2{
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--clr-secondary);
+  font-size: 3rem;
+  font-weight: 600;
+}
+.designs_wrapper{
+  display: grid;
+  grid-template-columns: 2.7fr .9fr;
+  grid-gap: 5rem;
+}
+.design_cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+}
+.design_cards .card{
+  padding: 2rem;
+  background: var(--clr-semilight);
+}
+.design_cards .card h4{
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--clr-dark);
+  font-size: 3rem;
+  font-weight: 600;
+}
+.design_sidebar ul{
+  list-style: none;
+}
+.design_sidebar ul li{
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+.design_cards .card i{
+  color: var(--clr-dark);
+  justify-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+  font-size: 3rem;
+  margin-top: 3rem;
+} */
 
 /* RECENT PROJECTS */
+/* RECENT PROJECT */
+.catalogProject{
+  padding: 5rem;
+   }
+   .catalogProject h2{
+   text-align: center;
+   font-size: 3rem;
+   font-weight: 700;
+   color: var(--clr-secondary);
+   }
+ .catalogProject__wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: 5rem;
+ }
+ .catalogProject__wrapper img{
+ width: 100%;
+ height: 40rem;
+ }
+ .catalogProject__card ul{
+   display: flex;
+   justify-content: space-between;
+  font-size: 2rem;
+   font-weight: 700;
+   color: var(--clr-dark);
+ 
+ }
+ .catalogProject__wrapper ul li{
+  margin-left: 1rem;
+   
+ }
+ @media screen and (max-width: 520px){
+ 
+ .updateBanner__wrapper{
+   grid-template-columns: 1fr;
+   gap: 1rem;
+   flex-direction: column;
+   align-items: center;
+ }
+ .catalogProject__wrapper{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ .buildingDesign__wrapper{
+   display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+ }
+ }
 
-.recentproject{
+/* .recentproject{
   padding: 3rem;
 }
 .recentproject h2{
@@ -854,23 +1043,119 @@
   width: 100%;
   margin-bottom: .8rem;
 }
-.recentproject_card ul li p{
-  color: var(--clr-dark);
-  font-size: 2rem;
+.recentproject_card ul li a{
+  color: #000;
+} */
+
+
+/* .recentproject{
+  padding: 3rem;
 }
-.recentproject_card ul li p a{
-  color: var(--clr-dark);
-  font-size: 2rem;
+.recentproject h2{
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--clr-primary);
 }
+.recentproject_wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+}
+.recentproject_wrapper ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.recentproject_wrapper img{
+  width: 100%;
+  margin-bottom: .8rem;
+}
+.recentproject_card ul li a{
+  color: #000;
+} */
+
 
 /* CONTACTS SECTION */
-.contactsSection{
+
+.contact{
+  padding: 2.5rem;
+}
+.contact h1{
+  font-size: 7rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--clr-primary);
+}
+.contact h2{
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+.contact_wrapper{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20rem;
+}
+.contact_form p{
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+.contact_form button{
+  max-width: 50rem;
+}
+.contact_form input,
+.contact_form textarea{
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding: .8rem 1rem;
+}
+.contact_form button{
+  width: 100%;
+  padding: 0.8rem 1rem;
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
+  margin-top: .8rem;
+  border: none;
+  border-radius: 2rem;
+}
+.contact_info h2{
+  font-size: 3rem;
+  font-weight: 700;
+}
+.contact_info{
+  background: #000;
+  color: #fff;
+  padding: 5rem;
+  /* margin-left: 25rem;   */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.contact_info ul{
+  list-style: none;
+}
+.contact_info ul li{
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.contact_info ul li i{
+  font-size: 2.5rem;
+  color: var(--clr-secondary);
+}
+
+/* .contactsSection{
   padding: 2.5rem;
 }
 .contactsSection h1{
   font-size: 7rem;
   font-weight: 700;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   color: var(--clr-primary);
 }
 .contactsSection h2{
@@ -880,8 +1165,16 @@
 }
 .contactsSection_wrapper{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 2fr;
   grid-gap: 10rem;
+}
+.contact_form p{
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+.contact_form button{
+  max-width: 50rem;
+  margin-left: 5rem;
 }
 .contact_form input,
 .contact_form textarea{
@@ -900,12 +1193,20 @@
   border: none;
   border-radius: 2rem;
 }
+.contact_info h2{
+  font-size: 3rem;
+  font-weight: 700;
+}
 .contact_info{
   background: #000;
   color: #fff;
-  padding: 2.5rem;
+  padding: 5rem;
+  margin-left: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
 }
-
 .contact_info ul{
   list-style: none;
 }
@@ -914,10 +1215,20 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  
 }
 .contact_info ul li i{
   font-size: 2.5rem;
   color: var(--clr-secondary);
+} */
+/* CONTACTS MOBILE */
+
+@media screen and (max-width:520px) {
+  .contact_wrapper{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
 }
 /* ----------------------------------------------------------------------------------------- */
 /* COMPONENTS */
